@@ -1,0 +1,75 @@
+.nav-link:hover{
+    color: darkorange;
+}
+
+body {
+    background-color: #fbc562;
+    text-align: center;
+}
+
+.background {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.content {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color:white;
+    min-height: 465px;
+
+}
+
+#sitename{
+    color:white;
+    margin-right:30px;
+    font-size: 18px;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+h2,h4{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.delbtn {
+    color: white;
+    background-color: red;
+}
+
+.chbtn {
+    color: white;
+    background-color:orange;
+    border-bottom-color:orange;
+}
+
+.submit{
+    color:green;
+    border:1px solid green;
+    background-color:white;
+    border-radius: 5px;
+}
+
+.float-left1 {
+    border-left: 6px solid orange;
+    padding: 10px;
+    background-color: #fff4e0;
+}
+
+.float-right1 {
+    border-right: 6px solid orange;
+    padding: 10px;
+    background-color: #fff4e0;
+}

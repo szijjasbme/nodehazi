@@ -1,0 +1,61 @@
+<%- include('header') %>
+
+<div class="background">
+    <div class="content">
+        <div class="newpldiv" style="width: 50%; margin: auto; padding: 10px">
+            <h4>Register new player</h4>
+            <form method="POST" id="newplayer">
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control" id="newname" name="name" placeholder="Player name"
+                           value="<%= (typeof player === 'undefined') ? '' : player.name %>">
+                </div>
+                <div class="form-group">
+                    <select type="text" class="form-control" id="newpos" placeholder="Position" name="position"
+                            value="<%= (typeof player === 'undefined') ? 'pg' : player.position %>">
+                        <option value="pg">Point guard</option>
+                        <option value="sg">Shooting guard</option>
+                        <option value="pf">Power forward</option>
+                        <option value="sf">Shooting forward</option>
+                        <option value="c">Center</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="newppg" name="point" placeholder="Points per game"
+                           value="<%= (typeof player === 'undefined') ? '' : player.point %>">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="newapg" name="assist" placeholder="Assists per game"
+                           value="<%= (typeof player === 'undefined') ? '' : player.assist %>">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="newrpg" name="rebound" placeholder="Rebounds per game"
+                           value="<%= (typeof player === 'undefined') ? '' : player.rebound %>">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="newage" name="age" placeholder="Age"
+                           value="<%= (typeof player === 'undefined') ? '' : player.age %>">
+                </div>
+                <div class="form-group">
+                    <%
+                    var found = "";
+                            for(team of teams) {
+                    %>
+                        <% if(typeof player !== 'undefined' && team.id == player._team) {
+                            found = team.abbreviation; %>
+                        <% } %>
+                    <%
+                    }
+                    %>
+                    <input type="text" class="form-control" id="newteam" name="_team" placeholder="Team (e.g.: LAL)"
+                           value="<%= (typeof player === 'undefined') ? '' : found %>">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include('footer') %>

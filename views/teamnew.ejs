@@ -1,0 +1,26 @@
+<%- include('header')%>
+
+<div class="background">
+    <div id="newpldiv">
+        <h4>Register new team</h4>
+        <form method="POST" id="newplayer">
+            <div class="form-group">
+                <input type="text"
+                       class="form-control" id="newname" name="name" placeholder="Team name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="newppg" name="abbreviation" placeholder="Abbreviation">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="newapg" name="founded" placeholder="Founded">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="newrpg" name="champ" placeholder="Championships">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<%- include('footer')%>
