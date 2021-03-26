@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 var getTeamsMW = require('../../../middleware/team/getTeamsMW');
 
-describe('getTeamsMW middleware ', function () {
+describe('getTeams middleware ', function () {
 
     it('should return teams', function (done) {
         var req = {};
